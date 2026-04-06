@@ -1,0 +1,187 @@
+import { motion } from "framer-motion";
+
+export default function App() {
+  return (
+    <div className="bg-[#05070d] text-white min-h-screen font-sans">
+
+      <nav className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div className="flex items-center gap-3">
+          <img src="/logo.png" className="h-10" alt="Darpan Logo"/>
+          <span className="text-lg font-semibold tracking-wide">DARPAN</span>
+        </div>
+
+        <div className="space-x-6 text-sm text-gray-300">
+          <button className="hover:text-white">Docs</button>
+          <button className="hover:text-white">Company</button>
+          <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-md text-white">
+            Request Demo
+          </button>
+        </div>
+      </nav>
+
+      <section className="text-center px-6 pt-24 pb-32 max-w-4xl mx-auto">
+
+        <motion.h1
+          initial={{opacity:0, y:20}}
+          animate={{opacity:1, y:0}}
+          transition={{duration:0.6}}
+          className="text-5xl md:text-6xl font-semibold leading-tight"
+        >
+          Nothing stored. <br/> Nothing to steal.
+        </motion.h1>
+
+        <p className="mt-6 text-lg text-gray-400">
+          Darpan verifies identity without storing any sensitive data.
+        </p>
+
+        <div className="mt-10 flex justify-center gap-4">
+          <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500">
+            Request Demo
+          </button>
+
+          <button className="px-6 py-3 rounded-lg border border-gray-700 hover:border-gray-500">
+            View Docs
+          </button>
+        </div>
+
+      </section>
+
+      <section className="py-24 px-6 max-w-5xl mx-auto text-center">
+
+        <h2 className="text-3xl font-semibold mb-6">
+          Security is built on a flaw
+        </h2>
+
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          Every system stores credentials.  
+          If it's stored, it can be stolen.
+        </p>
+
+      </section>
+
+      <section className="py-24 px-6 max-w-5xl mx-auto text-center">
+
+        <h2 className="text-3xl font-semibold mb-6">
+          We removed storage completely
+        </h2>
+
+        <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+          Instead of storing data, Darpan converts it into a mathematical token
+          and deletes the original.
+        </p>
+
+        <div className="flex justify-center gap-8 text-gray-300">
+
+          <div>Input</div>
+          <div>→</div>
+          <div>Equation</div>
+          <div>→</div>
+          <div>Token</div>
+          <div>→</div>
+          <div className="text-red-400">Delete</div>
+
+        </div>
+
+      </section>
+
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+
+        <h2 className="text-3xl font-semibold text-center mb-16">
+          Products
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          <div className="bg-[#0b0f19] p-8 rounded-xl border border-gray-800">
+            <h3 className="text-xl font-semibold mb-4">
+              Facio
+            </h3>
+
+            <p className="text-gray-400 mb-6">
+              Vault-free credential security
+            </p>
+
+            <ul className="space-y-2 text-gray-300">
+              <li>No stored keys or data</li>
+              <li>Nothing to breach</li>
+              <li>API-based</li>
+            </ul>
+          </div>
+
+          <div className="bg-[#0b0f19] p-8 rounded-xl border border-gray-800">
+            <h3 className="text-xl font-semibold mb-4">
+              Facio AI
+            </h3>
+
+            <p className="text-gray-400 mb-6">
+              Presence-based authentication
+            </p>
+
+            <ul className="space-y-2 text-gray-300">
+              <li>Works only when you're there</li>
+              <li>Locks instantly when you leave</li>
+              <li>Continuous verification</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+
+        <h2 className="text-3xl font-semibold mb-16">
+          Why it matters
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          <div className="bg-[#0b0f19] p-8 rounded-xl border border-gray-800">
+            <h3 className="text-lg font-semibold mb-4">Traditional</h3>
+            <ul className="text-gray-400 space-y-2">
+              <li>Stores data</li>
+              <li>Can be hacked</li>
+              <li>Session-based</li>
+            </ul>
+          </div>
+
+          <div className="bg-[#0b0f19] p-8 rounded-xl border border-blue-500">
+            <h3 className="text-lg font-semibold mb-4">Darpan</h3>
+            <ul className="text-gray-300 space-y-2">
+              <li>Stores nothing</li>
+              <li>Nothing to steal</li>
+              <li>Real-time verification</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="py-32 text-center px-6">
+
+        <h2 className="text-4xl font-semibold mb-10">
+          The end of stored credentials
+        </h2>
+
+        <div className="flex justify-center gap-6">
+
+          <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+            Request Demo
+          </button>
+
+          <button className="px-6 py-3 border border-gray-700 rounded-lg">
+            Contact
+          </button>
+
+        </div>
+
+      </section>
+
+      <footer className="border-t border-gray-800 py-10 text-center text-gray-500 text-sm">
+        Darpan, Inc. — Nothing stored. Nothing to steal.
+      </footer>
+
+    </div>
+  );
+}
